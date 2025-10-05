@@ -1,0 +1,69 @@
+:root {
+    --card-bg: #fff;
+    --card-text: #222;
+    --card-price: #333;
+    --btn-bg: #0077ff;
+    --btn-text: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --card-bg: #333;
+        --card-text: #eee;
+        --card-price: #fff;
+        --btn-bg: #1a1a1a;
+        --btn-text: #fff;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    color: var(--card-text);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.card h4 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.card h5 {
+    font-size: 1rem;
+    color: var(--card-price);
+    margin: 0.5rem 0;
+}
+
+.card button {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+    border-color: #646cff;
+    transform: scale(1.05);
+}

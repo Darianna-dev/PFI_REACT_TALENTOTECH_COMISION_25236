@@ -1,0 +1,15 @@
+:root {
+    --card-bg: #fff;
+    --card-text: #222;
+    --card-price: #333;
+    --btn-bg: #0077ff;
+    --btn-text: #fff;
+}
+
+.dark-theme {
+    --card-bg: #333;
+    --card-text: #eee;
+    --card-price: #fff;
+    --btn-bg: #1a1a1a;
+    --btn-text: #fff;
+}

@@ -1,11 +1,13 @@
-import { useState } from "react";
 import "./App.css";
 import ListaProductos from "./Components/ListaProductos/ListaProductos";
+import Nav from "./Components/Nav/Nav";
+import ThemeToggle from "./Components/ThemeToggle/ThemeToggle";
 
 function App() {
     return (
         <>
-            <h1>PFI Talento Tecch - Comision 25236</h1>
+            {/* <ThemeToggle /> */}
+            <Nav />
             <ListaProductos />
         </>
     );

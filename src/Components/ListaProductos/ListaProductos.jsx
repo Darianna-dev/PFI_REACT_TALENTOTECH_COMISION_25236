@@ -28,16 +28,19 @@ const ListaProductos = () => {
     if (error) return <p>{error}</p>;
 
     return (
-        <section className="container">
-            {productos.map((producto) => (
-                <div className="card">
-                    <img src={producto.image} alt={producto.title} />
-                    <h2 key={producto.id}>{producto.title}</h2>
-                    <h3>Price: ${producto.price}</h3>
-                    <input type="button" value="Comprar" />
-                </div>
-            ))}
-        </section>
+        <>
+            <h1>Productos</h1>
+            <section className="container">
+                {productos.map((producto) => (
+                    <div className="card" key={producto.id}>
+                        <img src={producto.image} alt={producto.title} />
+                        <h4>{producto.title}</h4>
+                        <h5>Price: ${producto.price}</h5>
+                        <button>Comprar</button>
+                    </div>
+                ))}
+            </section>
+        </>
     );
 };
 
