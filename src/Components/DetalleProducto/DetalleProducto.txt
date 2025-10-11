@@ -1,0 +1,88 @@
+/* :root {
+    --card-bg: #fff;
+    --card-text: #222;
+    --card-price: #333;
+    --btn-bg: #0077ff;
+    --btn-text: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --card-bg: #333;
+        --card-text: #eee;
+        --card-price: #fff;
+        --btn-bg: #1a1a1a;
+        --btn-text: #fff;
+    } */
+/* } */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: 500px;
+    gap: 0.5rem;
+    padding: 2rem;
+    margin: auto;
+    border: 1px solid #fff;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 600px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1rem;
+    background: var(--card-bg);
+    transition: all ease 0.3s;
+    /* margin: 0 auto; */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+img {
+    max-width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+}
+
+p {
+    /* font-size: 1rem; */
+    /* margin: 0.5rem 0; */
+    flex-grow: 1; /* ocupa espacio extra si hace falta */
+    padding: 10px;
+}
+
+h2 {
+    padding: 0.5rem;
+}
+
+h3 {
+    /* font-size: 1rem; */
+    color: var(--card-price);
+    /* margin: 0.5rem 0; */
+    padding: 0.5rem;
+}
+
+.card button {
+    width: 80%;
+    margin-top: auto; /* empuja el botón abajo */
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: #555;
+    transform: scale(1.05);
+}

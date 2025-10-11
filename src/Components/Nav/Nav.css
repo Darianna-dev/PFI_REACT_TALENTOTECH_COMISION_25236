@@ -33,7 +33,9 @@ header button {
     border-radius: 6px;
     color: white;
     cursor: pointer;
-    transition: transform 0.2s ease, border 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        border 0.2s ease;
 }
 
 header button:hover {
@@ -47,14 +49,20 @@ header button:active {
 
 /* Enlaces de navegación */
 header .nav-link {
+    align-self: center;
     background: #1a1a1a;
     width: 100px;
     text-decoration: none;
     color: white;
     padding: 0.5rem 1rem;
-    margin: 0 0.2rem;
+    margin: 0 0.3rem;
     border-radius: 6px;
     transition: background 0.3s ease;
+}
+
+.cart-btn {
+    width: 100px;
+    /* margin: 0.5rem; */
 }
 
 header .nav-link:hover {

@@ -1,0 +1,53 @@
+.detalle-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 30%;
+    margin: 20px auto;
+
+    .card-detalle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #999;
+        border-radius: 8px;
+
+        img {
+            width: 170px;
+            height: 200px;
+            padding: 10px;
+        }
+
+        h2 {
+            padding: 10px 20px;
+        }
+
+        p {
+            font-size: 0.85rem;
+            padding: 5px;
+            margin: 0 20px;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        h3 {
+            padding: 5px;
+            color: #00ff00;
+        }
+
+        .categoria {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        button {
+            margin-bottom: 20px;
+        }
+    }
+}

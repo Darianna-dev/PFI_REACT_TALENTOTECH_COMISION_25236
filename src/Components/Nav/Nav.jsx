@@ -30,10 +30,10 @@ const Nav = () => {
                 </NavLink>
             </div>
             <div className="nav-btn">
-                <NavLink to="/buscar" className="nav-link">
+                <NavLink to="/buscar" className="nav-link buscar">
                     Buscar
                 </NavLink>
-                <button className="cart-btn">Carrito</button>
+                <button className="cart-btn">🛒</button>
                 <ThemeToggle />
             </div>
         </header>

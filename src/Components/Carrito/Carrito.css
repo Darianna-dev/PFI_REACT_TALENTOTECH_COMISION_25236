@@ -1,0 +1,120 @@
+.carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-prod {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #888;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.card-prod:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-prod img {
+    width: 60%;
+    height: 50%;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+.card-prod p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 0 5px;
+    padding: 5px;
+    color: #fff;
+}
+
+.card-prod h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card-prod button {
+    width: 180px;
+    padding: 8px;
+    margin-bottom: 15px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.card-prod button:hover {
+    background-color: #444;
+}
+
+/* Botón de vaciar carrito */
+.vaciar-carrito-btn {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    padding: 10px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.vaciar-carrito-btn:hover {
+    background-color: darkred;
+}
+
+/* 
+.carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-prod {
+    width: 35%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+
+    & img {
+        width: 50%;
+        height: 40%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h5 {
+        margin-bottom: 5px;
+    }
+}
+button {
+    width: 180px;
+} */
