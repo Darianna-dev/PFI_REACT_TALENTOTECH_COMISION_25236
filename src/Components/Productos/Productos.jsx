@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import "./ListaProductos.css";
+import "./Productos.css";
 import { NavLink } from "react-router-dom";
 
-const ListaProductos = () => {
+const Productos = () => {
     const [productos, setProductos] = useState([]);
     const [error, setError] = useState(null);
     const [cargando, setCargando] = useState(true);
@@ -58,4 +58,4 @@ const ListaProductos = () => {
     );
 };
 
-export default ListaProductos;
+export default Productos;

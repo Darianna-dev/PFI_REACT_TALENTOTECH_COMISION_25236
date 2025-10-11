@@ -1,6 +1,6 @@
 import React from "react";
 import "./Inicio.css";
-import ListaProductos from "../ListaProductos/ListaProductos";
+import Productos from "../Productos/Productos";
 import Cafe from "../Cafe/Cafe";
 import { useState } from "react";
 
@@ -13,7 +13,7 @@ const Inicio = () => {
 
     return (
         <>
-            <ListaProductos agregarAlCarrito={"agregarAlCarrito"} />
+            <Productos />
         </>
     );
 };

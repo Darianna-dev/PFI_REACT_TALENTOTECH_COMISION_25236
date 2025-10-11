@@ -1,5 +1,5 @@
 import "./App.css";
-import ListaProductos from "./Components/ListaProductos/ListaProductos";
+// import Productos from "./Components/Productos/Productos";
 import Nav from "./Components/Nav/Nav";
 import Inicio from "./Components/Inicio/Inicio";
 import { Routes, Route } from "react-router-dom";
