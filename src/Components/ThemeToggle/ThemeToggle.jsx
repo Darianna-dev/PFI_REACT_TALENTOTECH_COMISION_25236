@@ -12,9 +12,7 @@ const ThemeToggle = () => {
         }
     }, [dark]);
 
-    return (
-        <button onClick={() => setDark(!dark)}>{dark ? "🌞 Modo Claro" : "🌙 Modo Oscuro"}</button>
-    );
+    return <button onClick={() => setDark(!dark)}>{dark ? "🌞" : "🌙"}</button>;
 };
 
 export default ThemeToggle;

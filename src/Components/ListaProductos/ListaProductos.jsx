@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./ListaProductos.css";
+import { NavLink } from "react-router-dom";
 
 const ListaProductos = () => {
     const [productos, setProductos] = useState([]);
@@ -7,37 +8,50 @@ const ListaProductos = () => {
     const [cargando, setCargando] = useState(true);
 
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
-            .then((response) => {
+        const obtenerProductos = async () => {
+            try {
+                const response = await fetch("https://fakestoreapi.com/products");
+
                 if (!response.ok) {
-                    throw new Error("Error al obtener los productos");
+                    throw new Error(`Error al obtener los productos. Estado: ${response.status}`);
                 }
-                return response.json();
-            })
-            .then((data) => {
+
+                const data = await response.json();
                 setProductos(data);
-                setCargando(false);
-            })
-            .catch((err) => {
+            } catch (err) {
                 setError(err.message);
+            } finally {
                 setCargando(false);
-            });
+            }
+        };
+
+        obtenerProductos();
     }, []);
 
     if (cargando) return <p>Cargando productos...</p>;
-    if (error) return <p>{error}</p>;
+    if (error) return <p>Error: {error}</p>;
 
     return (
         <>
             <h1>Productos</h1>
             <section className="container">
                 {productos.map((producto) => (
-                    <div className="card" key={producto.id}>
-                        <img src={producto.image} alt={producto.title} />
-                        <h4>{producto.title}</h4>
-                        <h5>Price: ${producto.price}</h5>
-                        <button>Comprar</button>
-                    </div>
+                    <NavLink
+                        to={`/producto/${producto.id}`}
+                        key={producto.id}
+                        className="card-link"
+                    >
+                        <div className="card">
+                            <img src={producto.image} alt={producto.title} />
+                            <h4>
+                                {producto.title.length > 40
+                                    ? producto.title.slice(0, 40) + "..."
+                                    : producto.title}
+                            </h4>
+                            <h5>Price: ${producto.price}</h5>
+                            <button>Ver Detalle</button>
+                        </div>
+                    </NavLink>
                 ))}
             </section>
         </>

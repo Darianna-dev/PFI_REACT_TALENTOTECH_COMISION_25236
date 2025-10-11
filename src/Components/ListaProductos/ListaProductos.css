@@ -15,6 +15,82 @@
         --btn-text: #fff;
     }
 }
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    color: var(--card-text);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: all ease 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+}
+
+.card h4 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    flex-grow: 1; /* ocupa espacio extra si hace falta */
+}
+
+.card h5 {
+    font-size: 1rem;
+    color: var(--card-price);
+    margin: 0.5rem 0;
+}
+
+.card button {
+    margin-top: auto; /* empuja el botón abajo */
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+/* :root {
+    --card-bg: #fff;
+    --card-text: #222;
+    --card-price: #333;
+    --btn-bg: #0077ff;
+    --btn-text: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --card-bg: #333;
+        --card-text: #eee;
+        --card-price: #fff;
+        --btn-bg: #1a1a1a;
+        --btn-text: #fff;
+    }
+}
 
 .container {
     display: grid;
@@ -60,10 +136,10 @@
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease;
 }
 
 .card button:hover {
     border-color: #646cff;
     transform: scale(1.05);
-}
+} */
