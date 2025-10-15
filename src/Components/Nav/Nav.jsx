@@ -31,9 +31,11 @@ const Nav = () => {
             </div>
             <div className="nav-btn">
                 <NavLink to="/buscar" className="nav-link buscar">
-                    Buscar
+                    <span>🔍</span>
                 </NavLink>
-                <button className="cart-btn">🛒</button>
+                <button className="cart-btn">
+                    <span>🛒</span>
+                </button>
                 <ThemeToggle />
             </div>
         </header>
