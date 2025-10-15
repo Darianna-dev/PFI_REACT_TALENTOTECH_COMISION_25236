@@ -5,26 +5,27 @@ const Carrito = ({ carrito, eliminarProducto, vaciarCarrito }) => {
         <section className="carrito">
             <h2>🛒 Carrito</h2>
 
-            {carrito.length === 0 ? (
-                <p>Tu carrito está vacío</p>
-            ) : (
-                carrito.map((producto, index) => (
-                    <div className="card-prod" key={index}>
-                        <img src={producto.image} alt={producto.title} />
-                        <p>
-                            {producto.title.length > 40
-                                ? producto.title.slice(0, 40) + "..."
-                                : producto.title}
-                        </p>
-                        {/* <h2>{producto.title}</h2> */}
-                        <h4>${producto.price}</h4>
-                        <button onClick={() => eliminarProducto(index)}>Eliminar</button>
-                    </div>
-                ))
-            )}
+            <div className="card-info">
+                {carrito.length === 0 ? (
+                    <p>Tu carrito está vacío</p>
+                ) : (
+                    carrito.map((producto, index) => (
+                        <div className="card-prod" key={index}>
+                            <img src={producto.image} alt={producto.title} />
+                            <p>
+                                {producto.title.length > 40
+                                    ? producto.title.slice(0, 40) + "..."
+                                    : producto.title}
+                            </p>
+                            <h4>${producto.price}</h4>
+                            <button onClick={() => eliminarProducto(index)}>Eliminar</button>
+                        </div>
+                    ))
+                )}
+            </div>
 
             {carrito.length > 0 && (
-                <button onClick={vaciarCarrito} className="vaciar-btn">
+                <button onClick={vaciarCarrito} className="vaciar-carrito-btn">
                     Vaciar Carrito
                 </button>
             )}
