@@ -2,11 +2,16 @@ import "./Productos.css";
 import { useNavigate } from "react-router-dom";
 
 const Productos = ({ productos, agregarCarrito }) => {
-    // const navigate = useNavigate(); // ✅ Debe ir aquí arriba, no dentro de useEffect
+    const navigate = useNavigate(); // ✅ Debe ir aquí arriba, no dentro de useEffect
 
-    // const irDetallesProducto = (id) => {
-    //     navigate(`/producto/${id}`); // ✅ Usá template string correcta
-    // };
+    if (!productos || productos.length === 0) {
+        return <p>No hay productos disponibles.</p>;
+    }
+
+    const irDetallesProducto = (id) => {
+        navigate(`/producto/${id}`);
+    };
+
     return (
         <>
             <h1>Productos</h1>
@@ -28,14 +33,15 @@ const Productos = ({ productos, agregarCarrito }) => {
                         </h4>
                         <h5>Precio: ${producto.price}</h5>
                         <button
+                            className="btn-comprar"
                             onClick={(e) => {
-                                e.preventDefault(); // 👈 evita que el click al botón dispare el NavLink
+                                e.preventDefault();
+                                e.stopPropagation();
                                 agregarCarrito(producto);
                             }}
                         >
                             Comprar 🛒
                         </button>
-                        {/* <button onClick={() => agregarCarrito(producto)}>Agregar al 🛒</button> */}
                     </div>
                 ))}
             </section>
